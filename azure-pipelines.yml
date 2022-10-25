@@ -11,7 +11,7 @@ steps:
   - task: Npm@1
     inputs:
       command: 'custom'
-      customcommand: 'install --production'
+      customcommand: 'install --production '
   - script: |
       npm install
       npm test
