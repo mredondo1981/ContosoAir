@@ -12,10 +12,6 @@ steps:
     inputs:
       command: 'custom'
       customcommand: 'install --production'
-    inputs:
-      SourceFolder: deployment
-      Contents: '*.json'
-      TargetFolder: '$(build.artifactstagingdirectory)/Templates'
   - task: Npm@1
     displayName: 'npm custom'
     inputs:
