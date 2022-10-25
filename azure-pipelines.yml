@@ -9,10 +9,6 @@ trigger:
   - master
 steps:
   - task: Npm@1
-    inputs:
-      command: 'custom'
-      customcommand: 'install --production'
-  - task: Npm@1
     displayName: 'npm custom'
     inputs:
       command: custom
