@@ -8,8 +8,10 @@ pool:
 trigger:
   - master
 steps:
-  - task: CopyFiles@2
-    displayName: 'Copy Files to: $(build.artifactstagingdirectory)/Templates'
+  - task: Npm@1
+    inputs:
+      command: 'custom'
+      customcommand: 'install --production'
     inputs:
       SourceFolder: deployment
       Contents: '*.json'
